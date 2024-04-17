@@ -47,6 +47,10 @@ body {
     filter: grayscale(20%);
 }
 
+.options li{
+    margin-left: 5px;
+}
+
 .option :where(span, label) {
     color: black;
     cursor: pointer;
@@ -170,3 +174,47 @@ body {
     height: 590px;
     border-radius: 10px;
 }
+
+
+.back_button{
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    border:solid black;
+    width:70%;
+    margin-top: 100px;
+}
+
+.back_button:hover{
+    background-color: #dfdfe0;
+}
+
+.heading{
+    position: relative;
+    left: 140px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading h1{
+    font-family: fantasy;
+    font-size: 60px;
+    color:black
+}
+
+
+@media screen and (max-width: 1459px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading{
+        left:30px
+    }
+    
+}
+
+

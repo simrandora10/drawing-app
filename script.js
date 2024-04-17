@@ -16,6 +16,8 @@ saveImage =
     document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
 
+const colorPicker2 = document.querySelector("#color-picker2");
+
 //global variabels wiht default values
 let prevMouseX, prevMouseY, snapshot,
     isDrawing = false,
@@ -170,8 +172,11 @@ const drawPencil = (e) => {
 const eraser_button= document.getElementById('eraser');
 
 eraser_button.addEventListener('click', ()=>{
-    
+    ctx.strokeStyle = "#fff";
+    ctx.lineWidth = 10;
+    selectedColor = "#fff";
 })
+
 
 
 const drawing = (e) => {
@@ -246,6 +251,12 @@ colorPicker.addEventListener("change", () => {
     colorPicker.value;
     colorPicker.parentElement.click();
 });
+
+colorPicker2.addEventListener('change', ()=>{
+    colorPicker2.parentElement.style.background = colorPicker2.value;
+    colorPicker2.parentElement.click();
+    selectedColor = colorPicker2.value;
+})
 
 cleatCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
