@@ -25,6 +25,92 @@
 	margin-top:15%;
 
 }
+
+
+.about_section_details{
+	display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a2 {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+nav ul li a3 {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+
+nav ul li a3::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    z-index: -1;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+nav ul li a3:hover::before {
+	position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 30px;
+	right: -30px;
+
+
+    /* right: 50px; */
+}
+
+nav ul li a2::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    z-index: -1;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+.about_section_details, .contact_section_details{
+	display: none;
+	color: #262626;
+}
+
+
+
+
+
+nav ul li a2:hover::before {
+	position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 30px;
+	right: -50px;
+
+
+    /* right: 50px; */
+}
+
+
+
 .carousel-item h1{
     font-size: 7em;
 	color: #fff;
@@ -81,3 +167,9 @@
 		padding: 0 2%;
 	}
 }
+
+body{
+	color: #0000ff;
+}
+
+
